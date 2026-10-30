@@ -1,6 +1,6 @@
 {
   "name": "altiv-entregas",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "private": true,
   "type": "module",
   "description": "Conferência offline de ATs e BRs e solicitações de correção de rota",
@@ -10,10 +10,12 @@
     "android:debug": "npm run build && npx cap sync android && cd android && ./gradlew assembleDebug"
   },
   "dependencies": {
-    "@capacitor/core": "8.6.0"
+    "@capacitor/core": "8.6.0",
+    "@capacitor-mlkit/barcode-scanning": "8.2.1"
   },
   "devDependencies": {
     "@capacitor/android": "8.6.0",
-    "@capacitor/cli": "8.6.0"
+    "@capacitor/cli": "8.6.0",
+    "esbuild": "0.25.12"
   }
 }
