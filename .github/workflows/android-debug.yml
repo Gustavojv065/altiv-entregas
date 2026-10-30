@@ -1,0 +1,55 @@
+name: Build Android APK (teste)
+on:
+  workflow_dispatch:
+  pull_request:
+  push:
+    branches:
+      - 'feat/**'
+      - 'fix/**'
+permissions:
+  contents: read
+jobs:
+  android-debug:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+      - name: Java 21
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '21'
+      - name: Node 22
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Android SDK
+        uses: android-actions/setup-android@v3
+        with:
+          packages: 'platform-tools'
+      - name: Install dependencies
+        run: npm install --no-audit --no-fund
+      - name: Tests and web package
+        run: |
+          npm test
+          npm run build
+      - name: Create Android project
+        run: npx cap add android
+      - name: Sync web assets
+        run: npx cap sync android
+      - name: Compile debug APK
+        run: |
+          chmod +x android/gradlew
+          cd android
+          ./gradlew --no-daemon assembleDebug
+      - name: Stage APK
+        run: |
+          mkdir -p dist
+          cp android/app/build/outputs/apk/debug/app-debug.apk dist/ALTIV-Entregas-debug.apk
+      - name: Upload test APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: ALTIV-Entregas-APK-debug
+          path: dist/ALTIV-Entregas-debug.apk
+          if-no-files-found: error
+          retention-days: 14
