@@ -1,0 +1,18 @@
+{
+  "name": "ALTIV Entregas — Conferência de ATs",
+  "short_name": "ALTIV Entregas",
+  "description": "Conferência local de BRs por AT, divergências DOE e lotes de correção",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#090f1d",
+  "theme_color": "#0b1020",
+  "icons": [
+    {
+      "src": "./assets/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
