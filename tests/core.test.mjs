@@ -7,7 +7,7 @@ const start=html.indexOf('const STORE_VERSION = 1;');
 const end=html.indexOf('/* PDF A4 minimalista', start);
 assert.ok(start>0&&end>start,'Motor de conferência embutido na página');
 const source=html.slice(start,end);
-const api=vm.runInNewContext('(function(){'+source+'; return {normBR,findBR,extractBRs,normRoute,emptyState,importAT,registerBR,upsertCorrection,summarize,matchAddressRule,exportCSV,addressRows};})()', {});
+const api=vm.runInNewContext('(function(){'+source+'; return {normBR,findBR,extractBRs,normRoute,emptyState,importAT,registerBR,upsertCorrection,summarize,matchAddressRule,exportCSV,addressRows,upsertAssignmentRequest};})()', {});
 const A='BR2689439187386',B='BR2657125532019',C='BR1234567890001',X='BR1234567890002';
 test('AT importa BRs sem contagem duplicada',()=>{
  const imported=api.extractBRs(A+'\n'+A+'\n'+B);
@@ -52,4 +52,27 @@ test('CSV impede fórmula executável',()=>{
 });
 test('página contém a interface e os campos operacionais',()=>{
  for(const x of ['Bipar pacotes','Correções','Regras de ruas','Relatórios','./manifest.webmanifest'])assert.ok(html.includes(x));
+});
+
+test('pacote extra precisa ser bipado antes de solicitar inclusão em AT',()=>{
+ const s=api.emptyState(),at=api.importAT(s,{name:'AT04',route:'DOE-04',content:A}).at;
+ assert.throws(()=>api.upsertAssignmentRequest(s,{atId:at.id,br:X,destRoute:'DOE-04'}),/Bipe/);
+ api.registerBR(s,at.id,X);
+ const r=api.upsertAssignmentRequest(s,{atId:at.id,br:X,destRoute:'DOE-04',street:'Rua X',neighborhood:'Centro'});
+ assert.equal(r.destRoute,'DOE-04');
+ assert.equal(s.ats[0].brs.length,1);
+ assert.equal(s.assignmentRequests.length,1);
+ api.upsertAssignmentRequest(s,{atId:at.id,br:X,destRoute:'DOE-13'});
+ assert.equal(s.assignmentRequests.length,1);
+ assert.equal(s.assignmentRequests[0].destRoute,'DOE-13');
+ assert.throws(()=>api.upsertAssignmentRequest(s,{atId:at.id,br:A,destRoute:'DOE-03'}),/consta na AT/);
+});
+test('DOE-13 é rota válida sem limitar o cadastro às 12 primeiras rotas',()=>{
+ assert.equal(api.normRoute('2-13'),'DOE-13');
+ assert.ok(html.includes('length:99'));
+});
+test('navegação enxuta e scanner nativo fazem parte da versão 2',()=>{
+ for(const label of ['Comece pela sua AT','Pacotes fora da AT','Solicitar inclusão em AT','scanOnce()','altiv-solicitar-atribuicao.csv']){
+   assert.ok(html.includes(label),'faltando: '+label);
+ }
 });
