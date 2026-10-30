@@ -25,6 +25,8 @@ jobs:
           node-version: '22'
       - name: Android SDK
         uses: android-actions/setup-android@v3
+        with:
+          packages: 'platform-tools'
       - name: Install dependencies
         run: npm install --no-audit --no-fund
       - name: Tests and web package
