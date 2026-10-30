@@ -8,6 +8,46 @@
 :root {font-family:Inter,ui-sans-serif,system-ui,-apple-system,'Segoe UI',Roboto,Arial,sans-serif;color:#e8edf8;background:#070c18;font-synthesis:none;--surface:#111a2b;--border:#29344a;--muted:#94a3bc;--blue:#4c86ff;--green:#28c89d;--orange:#ffbc65;--red:#ff727e}
 *{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 75% -18%,#152a50 0,transparent 46%),#090f1d;min-height:100vh}button,input,select,textarea{font:inherit}button{cursor:pointer}input,textarea,select{color:#ecf2ff}input:focus,textarea:focus,select:focus,button:focus-visible{outline:2px solid #6da0ff;outline-offset:2px}a{color:var(--blue)}.layout{display:flex;min-height:100vh}.sidebar{width:234px;flex:0 0 234px;position:sticky;top:0;height:100vh;padding:29px 14px 20px;background:#0b1425;border-right:1px solid #1c2a40;display:flex;flex-direction:column}.brand{display:flex;align-items:center;gap:12px;padding:0 10px 32px}.brand strong{display:block;font-size:21px;letter-spacing:3px}.brand small{font-size:10px;letter-spacing:3px;color:#92afce}.logo{height:42px;width:42px;border-radius:13px;background:linear-gradient(150deg,#2a6bfa,#35d7d6);font-weight:950;font-size:26px;display:grid;place-items:center;box-shadow:0 7px 20px #0d6dce55}.logo span{font-size:13px;margin-left:-11px;margin-top:20px}.side-label,.eyebrow{text-transform:uppercase;letter-spacing:1.45px;font-weight:800;color:#8296b5;font-size:10px;margin:0 10px 14px}.nav-item{display:flex;align-items:center;gap:13px;width:100%;border:0;border-radius:11px;color:#9dabc1;background:transparent;padding:13px 14px;text-align:left;font-size:13px;font-weight:650;margin:3px 0}.nav-item span{font-size:22px;width:22px;text-align:center;font-weight:400}.nav-item.active,.nav-item:hover{color:#eef5ff;background:#1b345b}.nav-item.active{box-shadow:inset 3px 0 var(--blue)}.aside-bottom{margin-top:auto;border:1px solid #27354a;border-radius:12px;padding:12px;font-size:12px;color:#a3b8d1;line-height:1.8}.aside-bottom small{color:#75859d}.offline-dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:#35d2a0;margin-right:5px}.main{max-width:1390px;width:calc(100% - 234px);padding:25px clamp(16px,3.6vw,52px)}.topbar{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:0 0 25px}.eyebrow{margin:0 0 7px;font-size:10px}.dot-sep{margin:0 5px}h1{font-size:clamp(25px,2.6vw,34px);letter-spacing:-1.25px;margin:0;font-weight:800}.top-actions{display:flex;align-items:center;gap:12px}.status-pill{white-space:nowrap;color:#7ee0ba;background:#153a35;border:1px solid #21634c;border-radius:50px;font-size:11px;font-weight:700;padding:9px 13px}.circle-btn{background:#172439;border:1px solid #2a3c55;color:#e8f1ff;border-radius:11px;height:36px;min-width:36px}.section-heading{display:flex;justify-content:space-between;gap:10px;align-items:center;margin:22px 0 13px}.section-heading h2{margin:0;font-size:18px;letter-spacing:-.5px}.section-heading p{margin:4px 0 0;font-size:12px;color:var(--muted)}.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.metric{min-height:117px;padding:17px;border-radius:16px;border:1px solid #283650;background:linear-gradient(145deg,#17263d,#101a2d)}.metric-top{display:flex;align-items:center;justify-content:space-between;font-size:11px;color:#a0b2c8;font-weight:650}.metric-icon{border-radius:10px;background:#273855;color:#84b4ff;padding:6px 9px;font-size:18px}.metric-num{font-size:32px;line-height:1.2;font-weight:780;letter-spacing:-1px;margin-top:8px}.metric-note{font-size:11px;margin-top:5px;color:#7f94b0}.grid2{display:grid;grid-template-columns:1.25fr 1fr;gap:16px}.panel{background:linear-gradient(150deg,#121f32,#101a2c);border:1px solid #28374f;border-radius:16px;padding:19px;min-width:0}.panel h3{font-size:15px;margin:0 0 10px}.muted{color:var(--muted)}.small{font-size:12px}.tiny{font-size:11px}.notice{background:#172e3c;border:1px solid #29606e;border-radius:12px;color:#b7dce6;padding:13px 14px;font-size:12px;line-height:1.55}.notice.warning{background:#392b22;border-color:#816139;color:#ffdda5}.notice.danger{background:#43252d;border-color:#83414c;color:#ffc4cb}.notice strong{color:inherit}.button-row{display:flex;flex-wrap:wrap;align-items:center;gap:9px}.btn{border:1px solid #3763ad;padding:11px 15px;border-radius:11px;background:#255eeb;color:white;font-weight:730;font-size:12px;display:inline-flex;align-items:center;justify-content:center;gap:9px;transition:filter .15s}.btn:hover{filter:brightness(1.16)}.btn.secondary{background:#1e2d44;border-color:#344a68;color:#dbe8fa}.btn.green{background:#128b77;border-color:#209d82}.btn.ghost{background:transparent;border-color:#354b66;color:#c9d8ea}.btn.danger{background:#74333c;border-color:#994853}.btn:disabled{opacity:.4;cursor:not-allowed}.btn.full{width:100%}.stack{display:flex;flex-direction:column;gap:12px}.field{display:flex;flex-direction:column;gap:7px;font-size:12px;color:#b5c6dc;font-weight:600}.field input,.field select,.field textarea,.input{width:100%;background:#0b1628;border:1px solid #35435d;border-radius:10px;min-height:44px;padding:11px 12px;font-size:13px;outline:0}.field textarea{resize:vertical;min-height:119px;line-height:1.45}.field input::placeholder,.field textarea::placeholder{color:#6c7d95}.field-row{display:grid;grid-template-columns:1fr 1fr;gap:13px}.field-row.three{grid-template-columns:1fr 1fr 1fr}.table-wrap{max-width:100%;overflow:auto}.data-table{border-collapse:collapse;width:100%;min-width:480px;text-align:left;font-size:12px}.data-table th{color:#8498b6;font-size:10px;letter-spacing:.5px;text-transform:uppercase;font-weight:750;padding:12px 10px;border-bottom:1px solid #31425b}.data-table td{padding:12px 10px;border-bottom:1px solid #25364c;vertical-align:middle}.data-table tr:last-child td{border-bottom:0}.data-table strong{font-weight:760}.pill{padding:5px 9px;display:inline-block;border-radius:99px;font-size:10px;font-weight:750;white-space:nowrap}.pill.good{background:#1b4b42;color:#76e1bb}.pill.bad{background:#4d2837;color:#ff9db0}.pill.warn{background:#463924;color:#ffcf81}.pill.neutral{background:#263b57;color:#a9c7ee}.chip{font-size:11px;color:#a6c4ed;padding:6px 10px;border:1px solid #345074;border-radius:99px;background:#1a3153;display:inline-block}.route-big{display:inline-block;color:#ddecff;background:#233d67;border:1px solid #41689c;border-radius:11px;font-size:23px;font-weight:800;padding:8px 14px}.progress{border-radius:99px;background:#2c3b52;height:9px;overflow:hidden}.progress>div{background:linear-gradient(90deg,#3f89f6,#28cfaa);height:100%;transition:width .2s}.list-row{display:flex;align-items:center;justify-content:space-between;gap:8px;border-bottom:1px solid #283b55;padding:12px 0}.list-row:last-child{border:0}.list-row strong{font-size:12px}.at-card{border:1px solid #34445f;border-radius:14px;padding:15px;display:flex;align-items:center;justify-content:space-between;gap:15px;background:#111e33}.at-card.selected{background:#172d49;border-color:#4488e3}.at-card h3{margin:0 0 5px;font-size:15px}.at-card small{color:#94a7c4}.at-card .btn{flex-shrink:0}.split-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}.mini-stat{background:#0d192c;border:1px solid #27374c;border-radius:12px;padding:12px}.mini-stat strong{display:block;font-size:24px}.mini-stat small{color:#95a7be}.notification{padding:12px 16px;border-radius:12px;background:#174235;border:1px solid #31785e;color:#c8ffde;font-size:13px;margin-bottom:17px}.notification.err{background:#4b2933;border-color:#a54b63;color:#ffe0e4}.hidden{display:none!important}.empty{padding:35px 15px;text-align:center;color:#879cb5;font-size:13px}.empty .emoji{font-size:35px;display:block;margin-bottom:8px}.nav-tabs{display:flex;gap:7px;margin-bottom:15px;flex-wrap:wrap}.nav-tabs button{background:#182b47;border:1px solid #37506c;border-radius:8px;padding:8px 12px;font-size:11px;color:#c2d4eb}.nav-tabs button.active{background:#2d61bb;border-color:#6095ec;color:white}.camera-dialog{border:1px solid #2d4565;background:#0e192b;color:white;border-radius:18px;width:min(94vw,560px);padding:15px;box-shadow:0 20px 80px #000a}.camera-dialog::backdrop{background:#050a11e0}.camera-dialog video{width:100%;max-height:68vh;object-fit:cover;border-radius:13px;background:#090e18;min-height:260px}.camera-head{display:flex;align-items:center;justify-content:space-between;padding:4px 5px 12px}.camera-dialog p{font-size:12px;color:#b3c9e5;margin:9px 0 4px}.footer{padding:28px 0;color:#607593;font-size:10px;text-align:center}.mobile-nav{display:none}.label-link{background:none;border:0;color:#80b4ff;cursor:pointer;font-size:12px;text-decoration:underline}.sticky-actions{display:flex;flex-wrap:wrap;gap:8px}.scan-input{font-size:16px!important;height:54px;border-color:#3e6ca4!important}.spaced{margin-top:16px}.accent{color:#77a9ff}.error-text{color:#ff9da6}.check{accent-color:#438bff;width:17px;height:17px}.line{height:1px;background:#2d3d52;margin:11px 0}.summary-banner{background:linear-gradient(115deg,#163d64,#0e2f40);border:1px solid #316387;border-radius:17px;padding:22px;display:flex;justify-content:space-between;align-items:center;gap:10px}.summary-banner h2{font-size:23px;margin:4px 0}.summary-banner p{font-size:12px;color:#b1cee5;max-width:520px;line-height:1.6}.summary-banner .spark{font-size:46px;opacity:.85}code{font-size:11px;background:#1b2c45;padding:2px 6px;border-radius:5px;color:#a7c9fc}.help-details{font-size:12px;line-height:1.8;color:#bdcde0}.help-details b{color:#f5f9ff}@media(max-width:1100px){.sidebar{width:196px;flex-basis:196px}.main{width:calc(100% - 196px)}.cards{grid-template-columns:repeat(2,1fr)}}@media(max-width:760px){.sidebar{display:none}.main{width:100%;padding:18px 13px 91px}.topbar{margin-bottom:19px}.status-pill{display:none}.cards{grid-template-columns:repeat(2,1fr);gap:9px}.metric{padding:13px;min-height:102px}.metric-num{font-size:27px}.metric-icon{font-size:15px}.grid2{grid-template-columns:1fr}.panel{padding:15px}.section-heading h2{font-size:17px}.field-row,.field-row.three{grid-template-columns:1fr}.split-stats{grid-template-columns:repeat(2,1fr)}.mobile-nav{position:fixed;z-index:60;bottom:0;left:0;right:0;display:flex;justify-content:space-around;background:#0d1728ed;backdrop-filter:blur(20px);border-top:1px solid #345074;padding:8px max(5px,env(safe-area-inset-right)) calc(9px + env(safe-area-inset-bottom))}.mobile-nav button{color:#8ba2bf;background:none;border:0;display:flex;flex-direction:column;align-items:center;gap:2px;padding:3px 5px;min-width:54px}.mobile-nav button span{font-size:22px}.mobile-nav button small{font-size:10px}.mobile-nav button.active{color:#6da7ff}.footer{padding-bottom:15px}.at-card{flex-wrap:wrap}.at-card .btn{width:100%}.summary-banner .spark{display:none}}@media(prefers-reduced-motion:reduce){*,*:before,*:after{transition:none!important;animation:none!important}}
 
+
+/* ALTIV Entregas 2.0: superficie enxuta para bipagem com uma mao */
+.v2-home{display:grid;gap:16px;max-width:790px}
+.v2-hero,.v2-scan-head{border:1px solid #2a4664;background:linear-gradient(155deg,#123553,#0e223a 75%);padding:23px;border-radius:19px}
+.v2-hero h2,.v2-scan-head h2{font-size:clamp(21px,5vw,27px);letter-spacing:-.6px;margin:4px 0 9px}
+.v2-hero p{color:#c2d1df;font-size:14px;line-height:1.55;margin:0 0 18px}
+.v2-primary{display:flex;gap:8px;flex-wrap:wrap}
+.v2-home .panel,.v2-compact{padding:19px}
+.v2-row{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.v2-row h2,.v2-row h3{margin:5px 0}
+.v2-count{display:flex;align-items:baseline;gap:10px;margin:16px 0 8px}
+.v2-count strong{font-size:48px;letter-spacing:-2.7px;line-height:1;color:#f6faff}
+.v2-count span{color:#bccbe0;font-size:13px}
+.v2-three{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-top:16px}
+.v2-three div{background:#15253e;border:1px solid #29405a;border-radius:11px;padding:12px 7px;display:grid;gap:5px;text-align:center}
+.v2-three strong{font-size:23px;color:#f0f7ff}
+.v2-three small{font-size:11px;color:#abbfd6}
+.v2-current .notice{margin-top:16px}
+.v2-compact .stack{gap:11px}
+.v2-compact textarea[name=content]{min-height:135px}
+.v2-scan-head{max-width:790px;margin-bottom:14px}
+.v2-camera-btn{margin-top:17px;min-height:57px;font-weight:800}
+.v2-pending{max-height:320px;overflow:auto}
+.v2-trail{margin:16px 0 8px;opacity:.8}
+.v2-actions .button-row{margin-bottom:10px}
+.v2-compact details summary,.panel details summary{padding:12px 0;cursor:pointer;font-weight:600}
+.v2-compact details .field-row{margin:10px 0}
+@media(max-width:700px){
+ .main{padding-top:18px}
+ .topbar{margin-bottom:17px}
+ .topbar h1{font-size:23px}
+ .v2-home{gap:11px}
+ .v2-hero,.v2-scan-head{padding:18px;border-radius:16px}
+ .v2-home .panel,.v2-compact{padding:15px}
+ .v2-primary .btn{flex:1}
+ .v2-three{gap:6px}
+ .v2-three strong{font-size:21px}
+ .v2-three small{font-size:10px}
+ .mobile-nav{justify-content:space-around}
+}
 </style><link rel="manifest" href="./manifest.webmanifest"><link rel="icon" type="image/svg+xml" href="./assets/icon.svg"><title>ALTIV Entregas — Conferência de ATs</title>
 </head>
 <body>
@@ -16,18 +56,16 @@
       <div class="brand"><div class="logo">A<span>↗</span></div><div><strong>ALTIV</strong><small>ENTREGAS</small></div></div>
       <div class="side-label">OPERAÇÃO LOGÍSTICA</div>
       <nav id="nav" aria-label="Navegação principal">
-        <button data-tab="dashboard" class="nav-item active"><span>◫</span> Visão geral</button>
+        <button data-tab="dashboard" class="nav-item active"><span>⌂</span> Início</button>
         <button data-tab="ats" class="nav-item"><span>▤</span> Minhas ATs</button>
         <button data-tab="scanner" class="nav-item"><span>▣</span> Bipar pacotes</button>
-        <button data-tab="corrections" class="nav-item"><span>⇄</span> Correções</button>
-        <button data-tab="rules" class="nav-item"><span>⌁</span> Regras de ruas</button>
-        <button data-tab="reports" class="nav-item"><span>▥</span> Relatórios</button>
-      </nav>
+        <button data-tab="corrections" class="nav-item"><span>⇄</span> Correções / planilhas</button>
+                      </nav>
       <div class="aside-bottom"><span class="offline-dot"></span> Dados locais • sem servidor<br><small>Não altera a Shopee</small></div>
     </aside>
     <main class="main">
       <header class="topbar">
-        <div><div class="eyebrow">PAINEL OPERACIONAL <span class="dot-sep">•</span> VERSÃO DE TESTE</div><h1 id="page-title">Visão geral</h1></div>
+        <div><div class="eyebrow">ALTIV ENTREGAS <span class="dot-sep">•</span> v2.0 de teste</div><h1 id="page-title">Visão geral</h1></div>
         <div class="top-actions"><span class="status-pill" id="networkStatus">● Offline habilitado</span><button class="circle-btn" id="helpBtn" title="Como funciona" aria-label="Como funciona">?</button></div>
       </header>
       <div id="notification" class="notification hidden" role="status" aria-live="polite"></div>
@@ -40,9 +78,10 @@
     <button data-tab="ats"><span>▤</span><small>ATs</small></button>
     <button data-tab="scanner"><span>▣</span><small>Bipar</small></button>
     <button data-tab="corrections"><span>⇄</span><small>Correções</small></button>
-    <button data-tab="reports"><span>▥</span><small>Relatórios</small></button>
+    
   </nav>
   <dialog id="cameraDialog" class="camera-dialog"><div class="camera-head"><strong>Leitor de QR / código de barras</strong><button id="closeCamera" aria-label="Fechar câmera" class="circle-btn">✕</button></div><video id="cameraView" playsinline muted autoplay></video><div class="camera-target"></div><p id="cameraStatus">Aponte para o código da etiqueta. Não escaneie dados pessoais.</p></dialog>
+  <script src="./native-scanner.js" defer></script>
   <script type="module">
 /* ALTIV Entregas — motor de conferência puro, sem dependências externas. */
 const STORE_VERSION = 1;
@@ -118,7 +157,7 @@ function addressRows(corrections) {
   }
   return [...byPlace.values()].map(x=>[x.street,x.neighborhood,x.from,x.to,x.brs.size,[...x.brs].join(' | '),'Solicitar avaliacao na roteirizacao oficial']);
 }
-function emptyState() {return {version:STORE_VERSION,ats:[],scans:[],corrections:[],rules:[],aliases:{},selectedAtId:null};}
+function emptyState() {return {version:STORE_VERSION,ats:[],scans:[],corrections:[],assignmentRequests:[],rules:[],aliases:{},selectedAtId:null};}
 function importAT(state, {name,route,content,expectedCount}) {
   const r = normRoute(route);
   if (!r) throw Error('Rota inválida: use DOE-03 ou DOE-04.');
@@ -203,12 +242,12 @@ function pdfBytes(title,lines){
 }
 
 let state=emptyState(),tab='dashboard',banner='',bannerError=false,focusedBR='',pendingRaw=null,cameraStream=null,cameraTimer=null,detector=null,processing=false;
-let selectedCorrections=new Set();
+let selectedCorrections=new Set(),focusedExtraBR='';
 const $=id=>document.getElementById(id);
 const h=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const now=()=>new Date().toLocaleString('pt-BR');
 const getAT=()=>state.ats.find(a=>a.id===state.selectedAtId)||null;
-const routeOptions=(chosen,includeEmpty=true)=>`${includeEmpty?'<option value="">Selecione a rota</option>':''}${Array.from({length:12},(_,i)=>`DOE-${String(i+1).padStart(2,'0')}`).map(r=>`<option value="${r}" ${r===chosen?'selected':''}>${r}</option>`).join('')}`;
+const routeOptions=(chosen,includeEmpty=true)=>`${includeEmpty?'<option value="">Selecione a rota</option>':''}${Array.from({length:99},(_,i)=>`DOE-${String(i+1).padStart(2,'0')}`).map(r=>`<option value="${r}" ${r===chosen?'selected':''}>${r}</option>`).join('')}`;
 const pill=(kind,text)=>`<span class="pill ${kind}">${h(text)}</span>`;
 const formatDate=iso=>{try{return new Date(iso).toLocaleString('pt-BR',{dateStyle:'short',timeStyle:'short'})}catch{return ''}};
 const btn=(label,action,kind='secondary',more='')=>`<button type="button" class="btn ${kind}" data-action="${action}" ${more}>${label}</button>`;
